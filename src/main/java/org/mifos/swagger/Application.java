@@ -12,6 +12,11 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
+/**
+ * @author Sachith Senarathne
+ * Initiating the application with needed resources with swagger integration
+ *
+ */
 public class Application {
 
 	//configuring the port for application

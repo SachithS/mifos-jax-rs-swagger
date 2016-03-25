@@ -4,6 +4,10 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+/**
+ * @author Sachith Senarathne
+ *
+ */
 public class AccountNotFoundException extends WebApplicationException {
 
 private static final long serialVersionUID = -2894269137259898072L;

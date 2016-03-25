@@ -20,6 +20,11 @@ import com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider;
 import com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON;
 import com.wordnik.swagger.jaxrs.listing.ResourceListingProvider;
 
+/**
+ * @author Sachith Senarathne
+ * 
+ *Setting up application configuration 
+ */
 @Configuration
 public class AppConfig {
 

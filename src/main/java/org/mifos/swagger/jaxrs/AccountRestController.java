@@ -26,6 +26,13 @@ import com.wordnik.swagger.annotations.ApiParam;
 import com.wordnik.swagger.annotations.ApiResponse;
 import com.wordnik.swagger.annotations.ApiResponses;
 
+/**
+ * @author Sachith Senarathne
+ * 
+ * Defining all the routes for application and swagger 
+ * definition parameters with the values
+ *
+ */
 @Path( "/account" ) 
 @Api( value = "/account", description = "Manage account" )
 public class AccountRestController {
