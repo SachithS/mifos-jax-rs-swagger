@@ -79,8 +79,8 @@ public class AccountRestController {
 	@ApiResponses({ @ApiResponse(code = 404, message = "Account with such account number doesn't exists") })
 	public Account updateAccount(
 			@ApiParam(value = "Account Number", required = true) @PathParam("accno") final String accno,
-			@ApiParam(value = "Account Holder", required = false) @FormParam("firstName") final String holder,
-			@ApiParam(value = "Branch ", required = false) @FormParam("lastName") final String branch) {
+			@ApiParam(value = "Account Holder", required = false) @FormParam("holder") final String holder,
+			@ApiParam(value = "Branch ", required = false) @FormParam("branch") final String branch) {
 
 		final Account account = accountService.getByAccountNumber(accno);
 
@@ -99,7 +99,7 @@ public class AccountRestController {
 	@DELETE
 	@ApiOperation(value = "Delete existing account", notes = "Delete existing account", response = Account.class)
 	@ApiResponses({ @ApiResponse(code = 404, message = "Account with such account number not exists") })
-	public Response deleteAccount(@ApiParam(value = "E-Mail", required = true) @PathParam("accno") final String accno) {
+	public Response deleteAccount(@ApiParam(value = "Account number", required = true) @PathParam("accno") final String accno) {
 		accountService.removeAccount(accno);
 		return Response.ok().build();
 	}
