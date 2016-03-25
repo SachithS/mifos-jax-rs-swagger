@@ -43,14 +43,14 @@ public class AccountService {
 	
 	public Account getByAccountNumber(final String accountNo) {
 		//get account by account number
-		final Account person = accounts.get(accountNo);
+		final Account account = accounts.get(accountNo);
 
-		if (person == null) {
+		if (account == null) {
 			//throwing the custom exception created when account is not found
 			throw new AccountNotFoundException(accountNo);
 		}
 
-		return person;
+		return account;
 	}
 
 	

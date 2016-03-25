@@ -52,7 +52,7 @@ public class AccountRestController {
 	@Path("/{accno}")
 	@GET
 	@ApiOperation(value = "Find account by account number", notes = "Find account by account number", response = Account.class)
-	@ApiResponses({ @ApiResponse(code = 404, message = "Person with such e-mail doesn't exists") })
+	@ApiResponses({ @ApiResponse(code = 404, message = "Account with such account number doesn't exists") })
 	public Account getAccount(
 			@ApiParam(value = "Account number to search", required = true) @PathParam("accno") final String accno) {
 		return accountService.getByAccountNumber(accno);
@@ -99,7 +99,7 @@ public class AccountRestController {
 	@DELETE
 	@ApiOperation(value = "Delete existing account", notes = "Delete existing account", response = Account.class)
 	@ApiResponses({ @ApiResponse(code = 404, message = "Account with such account number not exists") })
-	public Response deletePerson(@ApiParam(value = "E-Mail", required = true) @PathParam("accno") final String accno) {
+	public Response deleteAccount(@ApiParam(value = "E-Mail", required = true) @PathParam("accno") final String accno) {
 		accountService.removeAccount(accno);
 		return Response.ok().build();
 	}
