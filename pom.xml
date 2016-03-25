@@ -103,7 +103,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.example.Starter</mainClass>
+							<mainClass>org.mifos.swagger.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
